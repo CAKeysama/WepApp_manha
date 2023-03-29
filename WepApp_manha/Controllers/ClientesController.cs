@@ -14,6 +14,25 @@ namespace WepApp_manha.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Cadastro(string Nome, string Telefone)
+        {
+            if (string.IsNullOrEmpty(Nome))
+            {
+                TempData["ERRO 666"] = "O campo Nome não pode estar em branco.";
+            }
+
+            if (string.IsNullOrEmpty(Telefone))
+            {
+                TempData["ERRO 666"] = "O campo Telefone não pode estar em branco.";
+            }
+            else
+            {
+                TempData["OK"] = "Cliente cadastrado!";
+            }
+            return View();
+        }
+
         public IActionResult Editar(int id)
         {
             return View();
@@ -28,5 +47,7 @@ namespace WepApp_manha.Controllers
         {
             return View();
         }
+
+        
     }
 }

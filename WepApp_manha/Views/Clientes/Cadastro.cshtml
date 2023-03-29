@@ -4,12 +4,20 @@
 
     </div>
     <div class="col-4">
+
+        @if (TempData["ERRO 666"] != null)
+        {
+            <div class="alert alert-danger">
+                @TempData["ERRO 666"]
+            </div>
+        }
+
         <div class="card">
             <div class="card-header">
                 Cadastro de Cliente
-                </div>
+            </div>
 
-                <div class="card-body">
+            <div class="card-body">
 
                 <form action="/Clientes/Cadastro" method="post">
                     <label>Nome</label>
@@ -25,12 +33,11 @@
                     </button>
                 </form>
 
-                </div>
+            </div>
         </div>
-        
+
     </div>
     <div class="col-4">
-
     </div>
 
 </div>
