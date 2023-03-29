@@ -4,7 +4,7 @@ namespace WepApp_manha.Controllers
 {
     public class ClientesController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Lista()
         {
             return View();
         }
