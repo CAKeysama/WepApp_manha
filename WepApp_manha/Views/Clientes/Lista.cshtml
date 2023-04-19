@@ -1,4 +1,6 @@
-﻿<div class="card">
+﻿@model List<WepApp_manha.Models.ClienteViewModel>
+
+<div class="card">
     <div class="card-header">
         <h2>Lista de Clientes</h2>
     </div>
@@ -37,36 +39,22 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>gustavo</td>
-                    <td>(16) +55 9 9627-8054</td>
-                    <td>
-                        <a href="/Clientes/Editar/1" class="btn btn-warning">Editar</a>
-                        <a href="/Clientes/Excluir/1" class="btn btn-danger">Excluir</a>
-                        <a href="/Clientes/Compras/1" class="btn btn-success">Compras</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Luan</td>
-                    <td>(16) +55 9 8823-2531</td>
-                    <td>
-                        <a href="/Clientes/Editar/1" class="btn btn-warning">Editar</a>
-                        <a href="/Clientes/Excluir/1" class="btn btn-danger">Excluir</a>
-                        <a href="/Clientes/Compras/1" class="btn btn-success">Compras</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Paulo</td>
-                    <td>(16) +55 9 9722-1005</td>
-                    <td>
-                        <a href="/Clientes/Editar/1" class="btn btn-warning">Editar</a>
-                        <a href="/Clientes/Excluir/1" class="btn btn-danger">Excluir</a>
-                        <a href="/Clientes/Compras/1" class="btn btn-success">Compras</a>
-                    </td>
-                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Nome</td>
+                        <td>@item.Telefone</td>
+                        <td>
+                            <a href="/Clientes/Editar/@item.Id" class="btn btn-warning">Editar</a>
+                            <a href="/Clientes/Excluir/@item.Id" class="btn btn-danger">Excluir</a>
+                            <a href="/Clientes/Compras/@item.Id" class="btn btn-success">Compras</a>
+                        </td>
+                    </tr>
+                }
+
+                
             </tbody>
         </table>
     </div>

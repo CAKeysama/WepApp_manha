@@ -3,7 +3,6 @@
 <div class="row">
 
     <div class="col-4">
-
     </div>
     <div class="col-4">
 
@@ -16,22 +15,22 @@
 
         <div class="card">
             <div class="card-header">
-                Cadastro de Cliente
+                Editar Cliente
             </div>
 
             <div class="card-body">
 
                 <form action="/Clientes/SalvarDados" method="post">
                     <label>Nome</label>
-                    <input type="text" name="Nome" class="form-control" />
+                    <input type="text" name="Nome" class="form-control" value="@Model.Nome" />
 
                     <br />
                     <label>Telefone</label>
-                    <input type="text" name="Telefone" class="form-control" />
+                    <input type="text" name="Telefone" class="form-control" value="@Model.Telefone" />
 
                     <br />
-                    <button type="submit" class="btn btn-dark">
-                        Salvar Cliente
+                    <button type="submit" class="btn btn-success">
+                            Salvar Alterações
                     </button>
                 </form>
 
