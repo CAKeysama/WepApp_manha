@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<WepApp_manha.Entidades.Produtos>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -6,3 +8,10 @@
     <h3 class="display-3">site do gustavo</h3>
     <p>fazendo um site com backand.</p>
 </div>
+
+@foreach(var produto in Model){
+
+    var teste = produto.ATIVO == true ? "Disponivel" : "Indisponivel";
+
+    <p>    @produto.DRESCRICAO    -    R$ @produto.VALOR   -   @teste </p>
+}
