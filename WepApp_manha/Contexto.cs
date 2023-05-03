@@ -9,8 +9,8 @@ namespace WepApp_manha
         {}
 
         public DbSet<Produtos> Produtos { get; set; }
-        public DbSet<Categorias> Categorias { get; set; }
         public DbSet<PermissaoEntidade> PERMISSAO { get; set; }
+        public DbSet<CategoriaEntidade> CATEGORIA { get; set; }
 
     }
 }
