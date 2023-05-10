@@ -1,0 +1,49 @@
+﻿@model WepApp_manha.Entidades.CategoriaEntidade;
+
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <div class="card">
+
+            <div class="card-header">
+                <h4>Ediçãoi de Categoria</h4>
+            </div>
+            <div class="card-body">
+                <form action="/Categoria/SalvarDados" method="post">
+                    <label>Id</label>
+                    <input type="text" readonly name="Id" value="@Model.Id" class="form-control"/>
+
+                    <br />
+
+                    <label>Nome da Categoria</label>
+                    <input type="text" name="Nome" value="@Model.Nome" class="form-control"/>
+
+                    <br />
+
+                    <label>Descrição da Categoria</label>
+                    <input type="text" name="Descricao" value="@Model.Descricao" class="form-control" />
+
+                    <br />
+
+                    <label>Ativo</label>
+                    <select name="Ativo" class="form-control">
+                        @if(Model.Ativo)
+                        {
+                            <option value="true" selected="selected">Ativo</option>
+                            <option value="false">Desativado</option>
+                        }else{
+                            <option value="true">Ativo</option>
+                            <option value="false" selected="selected">Desativado</option>
+                        }
+                    </select>
+
+                    <br />
+
+                    <button type="submit" class="btn btn-success">
+                        Salvar
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

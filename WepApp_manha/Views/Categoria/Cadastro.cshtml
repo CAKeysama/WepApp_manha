@@ -1,0 +1,22 @@
+﻿@model WepApp_manha.Entidades.CategoriaEntidade
+
+
+<form action="/Categoria/SalvarDados" method="post">
+    <label>Descrição</label>
+    <input type="text" name="Descricao" />
+    <br />
+    <label>Nome</label>
+    <input type="text" name="Nome" />
+    <br />
+    <label>Avito</label>
+    <select name="Ativo" class="form-control">
+            <option value="true">Ativo</option>
+            <option value="false">Inativo</option>
+    </select>
+    <br />
+    <button type="submit">
+        Savar
+    </button>
+
+
+</form>
